@@ -2,6 +2,11 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const express = require('express')
+const fetch = require('node-fetch');
+var FormData = require('form-data')
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 
 const app = express()
@@ -9,7 +14,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
-    extended:true
+    extended:false
 }))
 
 app.use(express.static('dist'))
@@ -19,18 +24,20 @@ app.post('/apiCall', async (req, res) => {
 
 
   console.log("debug test")
-  const formText = req.body.url;
+  let formText = req.body.url;
   const lang = 'en';
-  const apiKey = process.env.API_KEY;
+  let apiKey = process.env.API_KEY
+  console.log(formText);
+  console.log(apiKey)
 
-  const formData = new FormData();
-  formData.append("key", apiKey);
-  formData.append("url", formText);
-  formData.append("lang", lang);
+  let form = new FormData();
+  form.append("key", apiKey);
+  form.append("url", formText);
+  form.append("lang", lang);
 
   const requestOptions = {
       method: 'POST',
-      body: formData,
+      body: form,
       redirect: 'follow'
   };
 
