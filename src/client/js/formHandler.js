@@ -15,7 +15,6 @@ async function handleSubmit(event) {
    
     
     const data = await response.json();
-    // Client.updateUI(data);
 }
 
 export {handleSubmit}
