@@ -1,4 +1,4 @@
-
+const validUrl = require('valid-url');
 
 
 async function handleSubmit(event) {
@@ -7,7 +7,7 @@ async function handleSubmit(event) {
     let url = document.getElementById('name').value;
 
 
-    if (Client.isValidHttpUrl(url)) {
+    if (!validUrl.isUri(url)) {
         alert('invalid url')
     }
     const response = await fetch('/apiCall', {
