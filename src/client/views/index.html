@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link type="stylesheet" href="/styles/resets.scss">
-        <link type="stylesheet" href="/styles/base.scss">
-        <link type="stylesheet" href="/styles/header.scss">
-        <link type="stylesheet" href="/styles/form.scss">
-        <link type="stylesheet" href="/styles/footer.scss">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link type="stylesheet" href="/styles/resets.scss">
+    <link type="stylesheet" href="/styles/base.scss">
+    <link type="stylesheet" href="/styles/header.scss">
+    <link type="stylesheet" href="/styles/form.scss">
+    <link type="stylesheet" href="/styles/footer.scss">
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+<body>
 
-        <main>
+    <header>
+        <div class="">
+            Logo
+        </div>
+        <div class="">
+            navigation
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="name" type="text" name="input" value="" onblur="" placeholder="Name">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)">
+            </form>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            <section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+                <section>
+                    <strong>Form Results:</strong>
+                    <div id="results"></div>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+                </section>
+    </main>
 
-    </body>
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+
+</body>
+
 </html>
