@@ -9,6 +9,5 @@ import './styles/header.scss'
 
 export {
     updateUI,
-    handleSubmit,
-    
+    handleSubmit
 }
