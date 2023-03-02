@@ -23,6 +23,7 @@ The technologies and methods practiced with this Project are:
 6. Open a terminal
 7. Type in
 >npm install
+
 >npm run build-prod
 
 and
